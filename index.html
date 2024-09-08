@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <button onclick="spread()">Spread Overlay</button> -->
+
   <section id="main">
       <div id="login" class="">
-    
+         <h1 id="celeb">Celebrare</h1>   
         <div class="sign" id="sg">
             <h4>Are you a new customer?</h4>
             <button onclick="chk()">Sing Up</button>
@@ -20,25 +20,29 @@
         <h4 id="sub">Sign in to Celebrare</h4>
 
        
-        <div class="inp" id="inp1">
-            <input type="text" placeholder="Email">
-            <!-- <label>Email</label> -->
+        <div class="inp" id="inp1" onclick="changeborder(1)">
+           <div class="ipp">
+            <input type="text" id="i1" class="" oninput="validateinput(); label1();"  >
+            <label>Email</label>
+           </div>
         </div>
 
-        <div class="inp" id="inp2">
-            <input type="password" placeholder="Password">
-            <!-- <label>Email</label> -->
+        <div class="inp" id="inp2"  onclick="changeborder(2)">
+          <div class="ipp">
+            <input type="password" id="i2" class="" oninput="validateinput(); label2();" >
+            <label>Password</label>
+          </div>
         </div>
 
         <div class="chk" id="ck">
             
-           <div id="checkbox">&#10004;</div>
+           <div onclick="mutatecheckbox()" id="checkbox"></div>
             <h4 id="rr">Remember Me</h4>
         </div>
 
       
 
-        <button id="btn" class="" onclick="shrinkOverlay()">Login</button>
+        <button id="btn" class="" onclick="login()" disabled >Login</button>
 
         <div class="chk" id="ck2">
             <h5 id="ff">Forgot Password?</h5>
